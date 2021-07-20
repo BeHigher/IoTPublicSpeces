@@ -83,7 +83,9 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :http => "https://quec-saas-aep.oss-cn-shanghai.aliyuncs.com/sdk_test/#{spec.name}-#{spec.version}.zip", :type => "zip" }
   
-  spec.source_files  = "QuecBLEKit",'QuecBLEKit/*.{h,m}'
+  spec.ios.vendored_frameworks = "#{spec.name}"
+  spec.source_files  = "#{spec.name}/**/*.framework/Headers/*.h"
+  spec.public_header_files = "#{spec.name}/**/*.framework/Headers/*.h"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
