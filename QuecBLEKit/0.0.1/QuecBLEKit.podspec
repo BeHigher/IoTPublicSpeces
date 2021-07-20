@@ -26,10 +26,10 @@ Pod::Spec.new do |spec|
   spec.source       = { :http => "https://quec-saas-aep.oss-cn-shanghai.aliyuncs.com/sdk_test/#{spec.name}-#{spec.version}.zip", :type => "zip" }
   
   spec.ios.vendored_frameworks = "QuecBLEKit"
-  # spec.source_files  = "QuecBLEKit/*.framework/Headers/*.h"
-  # spec.public_header_files = "QuecBLEKit/*.framework/Headers/*.h"
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
+  spec.frameworks = 'Foundation'
   
 
 end
