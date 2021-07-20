@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   # spec.description  = <<-DESC
   #                  DESC
 
-  spec.homepage     = "http://quectel.com"
+  spec.homepage     = "https://eip.quectel.com"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -81,9 +81,9 @@ Pod::Spec.new do |spec|
 
   spec.static_framework = true
 
-  spec.source       = { :http => "http://192.168.23.184:8108/frontend/app/QuectelSdkDemo/tree/master/outputs/#{spec.name}-#{spec.version}.zip", :type => "zip" }
+  spec.source       = { :http => "https://quec-saas-aep.oss-cn-shanghai.aliyuncs.com/sdk_test/#{spec.name}-#{spec.version}.zip", :type => "zip" }
   
- spec.source_files  = "#{spec.name}/headers", "*.{h,m}"
+  spec.source_files  = "QuecBLEKit",'QuecBLEKit/*.{h,m}'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
