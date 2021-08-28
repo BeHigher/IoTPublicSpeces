@@ -19,7 +19,8 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
   spec.source       = { :http => "https://quec-saas-app.oss-cn-shanghai.aliyuncs.com/sdk/#{spec.name}-#{spec.version}.zip", :type => "zip" }
   spec.ios.vendored_frameworks = "QuecNetworkChannelKit/QuecNetworkChannelKit.framework"
-    # spec.public_header_files = "QuecNetworkChannelKit/QuecNetworkChannelKit.framework/Headers/*.h"
+  spec.source_files = "QuecNetworkChannelKit/QuecNetworkChannelKit.framework/Headers/*.h"
+  spec.public_header_files = "QuecNetworkChannelKit/QuecNetworkChannelKit.framework/Headers/*.h"
   spec.dependency 'AFNetworking', '~>4.0.1'
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
