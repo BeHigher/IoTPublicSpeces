@@ -8,28 +8,20 @@
 
 Pod::Spec.new do |spec|
 
-
   spec.name         = "QuecBLEKit"
   spec.version      = "0.0.2"
   spec.summary      = "QuecBLEKit is BLE Channel"
-
-  spec.homepage     = "https://eip.quectel.com"
-
+  spec.homepage     = "https://www.quectel.com"
   spec.license      = "none"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
   spec.author             = { "quectel.steven" => "steven.xia@quectel.com" }
   spec.ios.deployment_target = "10.0"
-
   spec.static_framework = true
-
   spec.source       = { :http => "https://quec-saas-aep.oss-cn-shanghai.aliyuncs.com/sdk_test/#{spec.name}-0.0.1.zip", :type => "zip" }
-  
   spec.ios.vendored_frameworks = "QuecBLEKit/QuecBLEKit.framework"
+  spec.source_files = "QuecBLEKit/QuecBLEKit.framework/Headers/*.h"
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-
   spec.frameworks = 'Foundation'
   
-
 end
